@@ -3,24 +3,26 @@ import GameList from './GameList';
 
 const Home = () => {
 
-    const [games, setGames] = useState([
-        { title: 'Wordle', description: 'lorem ipsum...', author: 'Raul', id: 1 },
-        { title: 'Tic Tac Toe', description: 'lorem ipsum...', author: 'Sandra', id: 2 },
-        { title: 'Magical Memory', description: 'lorem ipsum...', author: 'Raul', id: 3 }
-    ]);
-
-    function handleDelete(id) {
-        const newGames = games.filter(game => game.id !== id);
-        setGames(newGames);
-    }
+    const [games, setGames] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-
+        setTimeout(() => {
+            fetch('http://localhost:8000/games')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setGames(data);
+                setIsLoading(false);
+            });
+        }, 1000);
     }, []);
 
     return (
         <div className="home">
-            <GameList games={games} title="All Games!" handleDelete={handleDelete} />
+            {isLoading && <div>Loading...</div>}
+            {games && <GameList games={games} title="All Games!" />}
         </div>
     );
 }

@@ -15,7 +15,7 @@
   border-bottom: 1px solid gold;
 }
 .navbar h1 {
-  color: goldenrod;
+  color: gold;
 }
 .navbar .links {
   margin-left: auto;
@@ -43,7 +43,7 @@
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
   cursor: text;
 }
-.game-preview h2 {
+.game-preview h3 {
   font-size: 20px;
   color: goldenrod;
   margin-bottom: 8px;
@@ -53,4 +53,8 @@
   color: #2E0249;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.game-list h2 {
+  color: gold; 
 }
