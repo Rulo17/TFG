@@ -33,3 +33,24 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+.game-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid gold;
+}
+.game-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
+  cursor: text;
+}
+.game-preview h2 {
+  font-size: 20px;
+  color: goldenrod;
+  margin-bottom: 8px;
+}
+.game-preview button {
+  background-color: goldenrod;
+  color: #2E0249;
+  border-radius: 5px;
+  cursor: pointer;
+}

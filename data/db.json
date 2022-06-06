@@ -1,0 +1,22 @@
+{
+    "games": [
+        {
+            "title": "Wordle",
+            "description": "Lorem ipsum...",
+            "author": "Raul Rodriguez",
+            "id": 1
+        },
+        {
+            "title": "Tic Tac Toe",
+            "description": "Lorem ipsum...",
+            "author": "Sandra Perez",
+            "id": 2
+        },
+        {
+            "title": "Magical Memory",
+            "description": "Lorem ipsum...",
+            "author": "Raul Rodriguez",
+            "id": 3
+        }
+    ]
+}
