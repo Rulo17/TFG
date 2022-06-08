@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import Home from './Home';
 import Create from './Create';
+import GameDetails from './GameDetails';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
             </Route>
             <Route path="/create">
               <Create />
+            </Route>
+            <Route path="/games/:id">
+              <GameDetails />
             </Route>
           </Switch>
         </div>

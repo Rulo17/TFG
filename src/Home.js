@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import GameList from './GameList';
 import useFetch from './useFetch';
 

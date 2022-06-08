@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const GameList = ({ games, title }) => {
 
     return ( 
@@ -5,8 +7,10 @@ const GameList = ({ games, title }) => {
             <h2>{title}</h2>
             {games.map((game) => (
                 <div className="game-preview" key={game.id}>
-                    <h3>{game.title}</h3>
-                    <p>Shared by {game.author}</p>
+                    <Link to={`/games/${game.id}`}> 
+                        <h3>{game.title}</h3>
+                        <p>Shared by {game.author}</p>
+                    </Link>
                 </div>
             ))}
         </div>
