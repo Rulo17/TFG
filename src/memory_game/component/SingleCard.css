@@ -1,0 +1,14 @@
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border: 2px solid darkred;
+  border-radius: 6px;
+}
+
+.card img.back {
+  height: 200px;
+}

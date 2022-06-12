@@ -1,12 +1,13 @@
 import { useState } from 'react';
+import SingleCard from './component/SingleCard';
 
 const cardImages = [
-    { "src": "./img/beast.png" },
-    { "src": "./img/eye.png" },
-    { "src": "./img/guidance.png" },
-    { "src": "./img/lake.png" },
-    { "src": "./img/metamorphosis.png" },
-    { "src": "./img/moon.png" }
+    { "src": "/img/beast.png" },
+    { "src": "/img/eye.png" },
+    { "src": "/img/guidance.png" },
+    { "src": "/img/lake.png" },
+    { "src": "/img/metamorphosis.png" },
+    { "src": "/img/moon.png" },
 ]
 
 function Rune() {
@@ -30,6 +31,12 @@ function Rune() {
         <div className="Rune">
             <h2>Rune Match</h2>
             <button onClick={shuffleCards}>New Game</button>
+
+            <div className="card-grid">
+                {cards.map(card => (
+                    <SingleCard key={card.id} card={card} />
+                ))}
+            </div>
         </div>
     );
 }
