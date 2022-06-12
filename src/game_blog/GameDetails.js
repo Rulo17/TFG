@@ -24,7 +24,10 @@ const GameDetails = () => {
                     <h2>{game.title}</h2>
                     <p>Shared by {game.author}</p>
                     <div>{game.description}</div>
-                    <button onClick={handleDelete}>Delete</button>
+                    <a href={game.link}>
+                        <button className="play">Play!</button>
+                    </a>
+                    <button className='delete' onClick={handleDelete}>Delete</button>
                 </article>
             )}
         </div>

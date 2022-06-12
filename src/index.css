@@ -11,7 +11,7 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   border-bottom: 1px solid gold;
 }
@@ -30,8 +30,8 @@
   color: goldenrod;
 }
 .content {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 800px;
+  margin: 30px auto;
   padding: 20px;
 }
 
@@ -75,13 +75,23 @@
 .game-details div {
   margin: 20px 0;
 }
-.game-details button {
+.game-details button.play {
   background: goldenrod;
   color: #2E0249;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  float: left;
+}
+.game-details button.delete {
+  background: peru;
+  color: #2E0249;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
 }
 
 /* create new game form */
@@ -126,4 +136,31 @@
 .not-found p {
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+/* Rune memory game */
+.Rune {
+  text-align: center;
+}
+
+.Rune h2 {
+  font-size: 30px;
+  color: red;
+  margin-bottom: 15px;
+}
+
+.Rune button {
+  background: none;
+  border: 2px solid darkred;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.Rune button:hover {
+  background: crimson;
+  color: black;
 }

@@ -13,10 +13,11 @@
       "id": 2
     },
     {
-      "title": "Magical Memory",
-      "description": "Lorem ipsum...",
+      "title": "Rune Memory",
+      "description": "Each card has a rune on one side and each rune appears on two different cards. Try to match these runes with each other using the minimun tries as possible. Good luck!",
       "author": "Raul Rodriguez",
-      "id": 3
+      "link": "http://localhost:3000/runematch",
+      "id": 5
     }
   ]
 }

@@ -5,12 +5,13 @@ const Create = () => {
     const [ title, setTitle ] = useState('');
     const [ description, setDescription ] = useState('');
     const [ author, setAuthor ] = useState('');
+    const [ link, setLink ] = useState('');
     const [isCreating, setIsCreating ] = useState(false);
     const redirect = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const game = { title, description, author };
+        const game = { title, description, author, link };
 
         setIsCreating(true);
         
@@ -37,6 +38,9 @@ const Create = () => {
 
                 <label>Game author:</label>
                 <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} required />
+
+                <label>Game link:</label>
+                <input type="text" value={link} onChange={(e) => setLink(e.target.value)} required />
 
                 { !isCreating && <button>Add Game</button> }
                 { isCreating && <button disabled>Adding game...</button> }
