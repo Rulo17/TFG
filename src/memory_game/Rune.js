@@ -1,19 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SingleCard from './component/SingleCard';
 
 const cardImages = [
-    { "src": "/img/beast.png" },
-    { "src": "/img/eye.png" },
-    { "src": "/img/guidance.png" },
-    { "src": "/img/lake.png" },
-    { "src": "/img/metamorphosis.png" },
-    { "src": "/img/moon.png" },
+    { "src": "/img/beast.png", matched: false },
+    { "src": "/img/eye.png", matched: false },
+    { "src": "/img/guidance.png", matched: false },
+    { "src": "/img/lake.png", matched: false },
+    { "src": "/img/metamorphosis.png", matched: false },
+    { "src": "/img/moon.png", matched: false },
 ]
 
 function Rune() {
 
     const [cards, setCards] = useState([]);
     const [turns, setTurns] = useState(0);
+    const [choiceOne, setChoiceOne] = useState(null);
+    const [choiceTwo, setChoiceTwo] = useState(null);
 
     // shuffle cards for new game
     const shuffleCards = () => {
@@ -25,7 +27,38 @@ function Rune() {
         setTurns(0);
     }
 
-    console.log(cards, turns)
+    //handle a choice
+    const handleChoice = (card) => {
+        choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+    }
+
+    //comparing two cards
+    useEffect(() => {
+        if(choiceOne && choiceTwo) {
+            if(choiceOne.src === choiceTwo.src) {
+                setCards(prevCards => {
+                    return prevCards.map(card => {
+                        if(card.src === choiceOne.src){
+                            return {...card, matched: true}
+                        }else{
+                            return card
+                        }
+                    })
+                });
+                resetTurn();
+            }else{
+                console.log('Wrong match!');
+                resetTurn();
+            }
+        }
+    }, [choiceOne, choiceTwo])
+
+    //reset choices & increase turn
+    const resetTurn = () => {
+        setChoiceOne(null);
+        setChoiceTwo(null);
+        setTurns(turnCount => turnCount + 1);
+    }
 
     return (
         <div className="Rune">
@@ -34,7 +67,7 @@ function Rune() {
 
             <div className="card-grid">
                 {cards.map(card => (
-                    <SingleCard key={card.id} card={card} />
+                    <SingleCard key={card.id} card={card} handleChoice={handleChoice} />
                 ))}
             </div>
         </div>
