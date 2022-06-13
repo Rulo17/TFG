@@ -16,6 +16,7 @@ function Rune() {
     const [turns, setTurns] = useState(0);
     const [choiceOne, setChoiceOne] = useState(null);
     const [choiceTwo, setChoiceTwo] = useState(null);
+    const [disabled, setDisabled] = useState(false);
 
     // shuffle cards for new game
     const shuffleCards = () => {
@@ -23,18 +24,31 @@ function Rune() {
             .sort(() => Math.random() - 0.5)
             .map(card => ({ ...card, id: Math.random() }));
 
+        setChoiceOne(null);
+        setChoiceTwo(null);
         setCards(shuffledCards);
         setTurns(0);
     }
+        
+    
+    //start game automatically
+    useEffect(() =>{
+        shuffleCards();
+    }, [])
+
 
     //handle a choice
     const handleChoice = (card) => {
         choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
     }
 
+
     //comparing two cards
     useEffect(() => {
         if(choiceOne && choiceTwo) {
+
+            setDisabled(true);
+
             if(choiceOne.src === choiceTwo.src) {
                 setCards(prevCards => {
                     return prevCards.map(card => {
@@ -46,19 +60,22 @@ function Rune() {
                     })
                 });
                 resetTurn();
-            }else{
-                console.log('Wrong match!');
-                resetTurn();
+            }else{       
+                setTimeout(() => resetTurn(), 750);
             }
+
         }
     }, [choiceOne, choiceTwo])
+
 
     //reset choices & increase turn
     const resetTurn = () => {
         setChoiceOne(null);
         setChoiceTwo(null);
         setTurns(turnCount => turnCount + 1);
+        setDisabled(false);
     }
+
 
     return (
         <div className="Rune">
@@ -67,9 +84,16 @@ function Rune() {
 
             <div className="card-grid">
                 {cards.map(card => (
-                    <SingleCard key={card.id} card={card} handleChoice={handleChoice} />
-                ))}
+                    <SingleCard key={card.id} 
+                    card={card} 
+                    handleChoice={handleChoice} 
+                    flipped={card === choiceOne || card === choiceTwo || card.matched} 
+                    disabled={disabled}
+                    />
+                    ))}
             </div>
+            
+            <p>Tries: {turns}</p>
         </div>
     );
 }
