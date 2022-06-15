@@ -1,12 +1,6 @@
 {
   "games": [
     {
-      "title": "Wordle",
-      "description": "Lorem ipsum...",
-      "author": "Raul Rodriguez",
-      "id": 1
-    },
-    {
       "title": "Tic Tac Toe",
       "description": "Lorem ipsum...",
       "author": "Sandra Perez",
@@ -18,6 +12,158 @@
       "author": "Raul Rodriguez",
       "link": "http://localhost:3000/runematch",
       "id": 5
+    },
+    {
+      "title": "Wordle",
+      "description": "You have six attempts to try and guess the five letter random word. Good luck!",
+      "author": "Raul Rodriguez",
+      "link": "http://localhost:3000/wordle",
+      "id": 6
+    }
+  ],
+  "letters": [
+    {
+      "key": "a"
+    },
+    {
+      "key": "b"
+    },
+    {
+      "key": "c"
+    },
+    {
+      "key": "d"
+    },
+    {
+      "key": "e"
+    },
+    {
+      "key": "f"
+    },
+    {
+      "key": "g"
+    },
+    {
+      "key": "h"
+    },
+    {
+      "key": "i"
+    },
+    {
+      "key": "j"
+    },
+    {
+      "key": "k"
+    },
+    {
+      "key": "l"
+    },
+    {
+      "key": "m"
+    },
+    {
+      "key": "n"
+    },
+    {
+      "key": "ñ"
+    },
+    {
+      "key": "o"
+    },
+    {
+      "key": "p"
+    },
+    {
+      "key": "q"
+    },
+    {
+      "key": "r"
+    },
+    {
+      "key": "s"
+    },
+    {
+      "key": "t"
+    },
+    {
+      "key": "u"
+    },
+    {
+      "key": "v"
+    },
+    {
+      "key": "w"
+    },
+    {
+      "key": "x"
+    },
+    {
+      "key": "y"
+    },
+    {
+      "key": "z"
+    }
+  ],
+  "solutions": [
+    {
+      "id": 1,
+      "word": "grado"
+    },
+    {
+      "id": 2,
+      "word": "coche"
+    },
+    {
+      "id": 3,
+      "word": "juego"
+    },
+    {
+      "id": 4,
+      "word": "luces"
+    },
+    {
+      "id": 5,
+      "word": "umami"
+    },
+    {
+      "id": 6,
+      "word": "perro"
+    },
+    {
+      "id": 7,
+      "word": "barco"
+    },
+    {
+      "id": 8,
+      "word": "arroz"
+    },
+    {
+      "id": 9,
+      "word": "manos"
+    },
+    {
+      "id": 10,
+      "word": "horno"
+    },
+    {
+      "id": 11,
+      "word": "movil"
+    },
+    {
+      "id": 12,
+      "word": "casco"
+    },
+    {
+      "id": 13,
+      "word": "globo"
+    },
+    {
+      "id": 14,
+      "word": "planta"
+    },
+    {
+      "id": 15,
+      "word": "setas"
     }
   ]
 }

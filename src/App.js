@@ -4,6 +4,7 @@ import Home from './game_blog/Home';
 import Create from './game_blog/Create';
 import GameDetails from './game_blog/GameDetails';
 import NotFound from './game_blog/NotFound';
+import Wordle from './wordle/MainGame';
 import Rune from './memory_game/Rune';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/games/:id">
               <GameDetails />
+            </Route>
+            <Route path="/wordle">
+              <Wordle />
             </Route>
             <Route path="/runematch">
               <Rune />
