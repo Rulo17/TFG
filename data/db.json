@@ -1,12 +1,6 @@
 {
   "games": [
     {
-      "title": "Tic Tac Toe",
-      "description": "Lorem ipsum...",
-      "author": "Sandra Perez",
-      "id": 2
-    },
-    {
       "title": "Rune Memory",
       "description": "Each card has a rune on one side and each rune appears on two different cards. Try to match these runes with each other using the minimun tries as possible. Good luck!",
       "author": "Raul Rodriguez",
@@ -19,6 +13,13 @@
       "author": "Raul Rodriguez",
       "link": "http://localhost:3000/wordle",
       "id": 6
+    },
+    {
+      "title": "Tic tac toe",
+      "description": "Try to line up three of your symbols in a row, but don´t let your opponent get it before you!",
+      "author": "Tomy Rabbaco",
+      "link": "https://playtictactoe.org/",
+      "id": 7
     }
   ],
   "letters": [

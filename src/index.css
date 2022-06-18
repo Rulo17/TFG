@@ -35,6 +35,25 @@
   padding: 20px;
 }
 
+.home h2 {
+  color: gold;
+  margin-bottom: 15px;
+}
+.search {
+  float: right;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 20px;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: white;
+  color: black;
+}
+.search:hover, .search:focus {
+  border: 2px solid goldenrod;
+  background-color: white;
+}
+
 /*------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Game blog styles */
